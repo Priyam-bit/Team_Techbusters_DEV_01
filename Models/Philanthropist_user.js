@@ -1,6 +1,6 @@
 const { model, Schema } = require("mongoose");
 
-const NGOuserSchema = new Schema({
+const PilanthropistuserSchema = new Schema({
     "name" : { 
         type : String, 
         required : true,
@@ -24,39 +24,16 @@ const NGOuserSchema = new Schema({
         required : true,
         max : 20
     },
-    "end_goal" : {
-        type : String,
-        required : true,
-        max : 1000
-    },
-    "prev_works" : {
-        type : String,
-        required : true,
-        max : 1000
-    },
-    "plan" : {
-        type : String,
-        required : true,
-        max : 1000
-    },
-    "gallery" : {
-        type : Array,
-        default : [],
-        required : false
-    },
     "agendas" : {
         type : Array,
         default : [],
         required : false
     },
-    "fund_required" : {
-        type : Number,
-        required : true
-    },
-    "fund_received" : {
-        type : Number,
-        required : true
+    "NGOs_donated_to" : {
+        type : Array,
+        default : [],
+        required : false
     },
 })
 
-module.exports = model('NGO', NGOuserSchema);
+module.exports = model('Philanthropist', PilanthropistuserSchema);

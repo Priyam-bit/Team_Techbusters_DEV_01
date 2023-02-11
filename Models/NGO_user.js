@@ -37,7 +37,7 @@ const NGOuserSchema = new Schema({
     "plan" : {
         type : String,
         required : true,
-        max : 1000
+        max : 5000
     },
     "gallery" : {
         type : Array,

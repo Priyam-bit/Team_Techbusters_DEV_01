@@ -114,7 +114,6 @@ router.patch('/:id', async (req,res) => {
 
 router.post('/login', async (req,res) => {
     const body = req.body;
-    console.log(body);
     const ngo = await NGO.findOne({email : body.email});
     if(ngo === null) {
         return res.status(404).json({

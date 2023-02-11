@@ -16,4 +16,4 @@ const MessageSchema = new Schema({
     },
 })
 
-module.exports = model('Philanthropist', MessageSchema);
+module.exports = model('Message', MessageSchema);

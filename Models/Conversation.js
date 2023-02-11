@@ -6,4 +6,4 @@ const ConversationSchema = new Schema({
     },
 })
 
-module.exports = model('Philanthropist', ConversationSchema);
+module.exports = model('Conversation', ConversationSchema);

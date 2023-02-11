@@ -5,6 +5,10 @@ const PostSchema = new Schema({
         type : String, 
         required : true,
     },
+    "groupId" : {
+        type : String, 
+        required : true,
+    },
     "desc" : {
         type : String,
         required : false,
@@ -15,8 +19,10 @@ const PostSchema = new Schema({
         required : false,
     },
     "likes" : {
-        type : Array
+        type : Array,
+        default : [],
+        required : false
     },
 })
 
-module.exports = model('Philanthropist', PostSchema);
+module.exports = model('Post', PostSchema);

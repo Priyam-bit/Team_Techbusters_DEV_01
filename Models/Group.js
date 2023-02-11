@@ -8,12 +8,10 @@ const GroupSchema = new Schema({
         max :20,
         unique : true
     },
-    "members" : {
-        type : Array,
-    },
-    "posts" : {
-        type : Array
+    "admin" : {
+        type : String,
+        required : true
     },
 })
 
-module.exports = model('Philanthropist', GroupSchema);
+module.exports = model('Group', GroupSchema);

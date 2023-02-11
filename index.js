@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const { Router } = require('express');
 const NGOController = require('./Controllers/NGOController');
 const PhilathropistController = require('./Controllers/PhilanthropistController');
+const GroupController = require('./Controllers/GroupController');
+const PostController = require('./Controllers/PostController');
 
 dotenv.config();
 
@@ -29,6 +31,8 @@ app.get('/', (req,res) => {
 
 app.use('/api/ngo', NGOController);
 app.use('/api/philanthropist', PhilathropistController)
+app.use('/api/group', GroupController)
+app.use('/api/posts', PostController)
 
 app.listen(8000, () => {
     console.log("Server now listening on port 3000")

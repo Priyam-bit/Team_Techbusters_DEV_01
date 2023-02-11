@@ -23,6 +23,11 @@ const PostSchema = new Schema({
         default : [],
         required : false
     },
+    "isNews" : {
+        type : Boolean,
+        default : false,
+        required : false
+    }
 })
 
 module.exports = model('Post', PostSchema);
